@@ -1,4 +1,11 @@
 import mongoose from "mongoose";
+export interface User{
+    _id:string;
+    username:string;
+    email:string;
+    password:string;
+    isAdmin:boolean;
+}
 const UserSchema = new mongoose.Schema(
   {
     username: {
