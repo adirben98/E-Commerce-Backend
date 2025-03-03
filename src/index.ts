@@ -7,6 +7,7 @@ import productsRouter from './Routes/product'
 import cartsRouter from './Routes/cart'
 import ordersRouter from './Routes/order'
 import usersRouter from './Routes/user'
+import stripeRouter from './Routes/stripe'
 import cors from "cors"
 
 dotenv.config()
@@ -19,4 +20,5 @@ app.use('/users',usersRouter)
 app.use('/products',productsRouter)
 app.use('/carts',cartsRouter)
 app.use('/orders',ordersRouter)
+app.use('/stripe',stripeRouter)
 app.listen(process.env.PORT,()=>console.log("server has started"))
